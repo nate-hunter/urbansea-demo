@@ -50,7 +50,7 @@ const server = new ApolloServer({
 });
 
 // server.listen();
-server.listen().then( ({ url }) => {
+server.listen({ port: process.env.PORT || 4000 }).then( ({ url }) => {
     console.log(`\n\tHi Panda - Server listening on ${url}\n`)
 });
 
